@@ -517,7 +517,7 @@ body:not(.user-is-tabbing) a:focus {
     filter: invert(100%) grayscale(100%) opacity(.8);
     */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+    grid-template-columns: repeat(5, 1fr); /* Fixed 5 columns */
     gap: 10px; /* Adjust the gap between images */
     filter: invert(100%) grayscale(100%) opacity(.8);
     justify-content: center; /* Center the grid items */
@@ -537,6 +537,7 @@ body:not(.user-is-tabbing) a:focus {
 
 @media(max-width: 1240px) {
     .client__logos {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns for smaller screens */
         overflow-x: hidden; /* Remove horizontal scroll */
         padding: 0; /* Remove padding */
     }
