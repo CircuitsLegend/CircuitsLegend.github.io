@@ -517,9 +517,10 @@ body:not(.user-is-tabbing) a:focus {
     filter: invert(100%) grayscale(100%) opacity(.8);
     */
     display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns */
-  gap: 10px; /* Adjust the gap between images */
-  filter: invert(100%) grayscale(100%) opacity(.8);
+    grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns */
+    grid-template-rows: repeat(2, auto); /* Two rows */
+    gap: 10px; /* Adjust the gap between images */
+    filter: invert(100%) grayscale(100%) opacity(.8);
 }
 
 .client__logo {
@@ -530,7 +531,7 @@ body:not(.user-is-tabbing) a:focus {
     margin-bottom: 1rem;
     */
     height: 6.5rem;
-  max-width: 100%; /* Ensure images fit within their grid cells */
+    max-width: 100%; /* Ensure images fit within their grid cells */
 }
 
 @media(max-width: 1240px) {
