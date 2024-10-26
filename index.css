@@ -510,17 +510,27 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .client__logos {
+    /**
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     filter: invert(100%) grayscale(100%) opacity(.8);
+    */
+    display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns */
+  gap: 10px; /* Adjust the gap between images */
+  filter: invert(100%) grayscale(100%) opacity(.8);
 }
 
 .client__logo {
+    /*
     flex: 1 1 calc(20%-1rem);
     height: 6.5rem;
     max-width: 18rem;
     margin-bottom: 1rem;
+    */
+    height: 6.5rem;
+  max-width: 100%; /* Ensure images fit within their grid cells */
 }
 
 @media(max-width: 1240px) {
