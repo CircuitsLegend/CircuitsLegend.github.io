@@ -517,10 +517,11 @@ body:not(.user-is-tabbing) a:focus {
     filter: invert(100%) grayscale(100%) opacity(.8);
     */
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns */
-    grid-template-rows: repeat(2, auto); /* Two rows */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
     gap: 10px; /* Adjust the gap between images */
     filter: invert(100%) grayscale(100%) opacity(.8);
+    justify-content: center; /* Center the grid items */
+    align-items: center; /* Center the grid items vertically */
 }
 
 .client__logo {
@@ -536,12 +537,12 @@ body:not(.user-is-tabbing) a:focus {
 
 @media(max-width: 1240px) {
     .client__logos {
-        overflow-x: scroll;
-        padding: var(--gutter-normal);
+        overflow-x: hidden; /* Remove horizontal scroll */
+        padding: 0; /* Remove padding */
     }
 
     .client__logo:not(:last-of-type) {
-        margin-right: var(--gutter-medium);
+        margin-right: 0; /* Remove margin-right */
     }
 }
 
